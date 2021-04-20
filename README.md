@@ -9,15 +9,17 @@ The final results is a json output that can be intergrated with other projects
 pip3 install osint
 ```
 
-## Running
+## Usage Example - Test
 ```bash
 sudo -E python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
-#Or your script
+#Or your own script
 sudo -E test.py
 ```
 
 ## Usage Example - Scan ips or domains for http and https
 ```python
+#Remember you need higher privileges
+
 from osint import QBDns, QBScan
 targets = QBDns().convert_to_ips(["http://test.com","1.2.3.4"] )
 targets = QBScan().run(targets,[80,443])
@@ -26,6 +28,7 @@ print(targets)
 
 ## Usage Example - Extract text from domains
 ```python
+#Remember you need higher privileges
 from osint import QBDns, QBHost, QBExtract
 targets = QBDns().convert_to_ips(["http://test.com"] )
 targets = QBHost().run(targets)
@@ -35,12 +38,8 @@ print(targets)
 
 ## Usage Example - Interact with the built-in database
 ```python
+from osint import QBGetInfo
 print(QBGetInfo().cursor.execute(("SELECT * FROM ports WHERE port=?"),(80,)).fetchone())
-```
-
-## Usage Example - Test
-```bash
-sudo python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
 ```
 
 ## Current modules
