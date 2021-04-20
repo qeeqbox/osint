@@ -1,6 +1,6 @@
 .. image:: https://raw.githubusercontent.com/qeeqbox/osint/main/readme/osint_logo.png
 
-Build your custom OSINT tools and APIs with this python package! It includes different OSINT modules for performing reconnaissance on the target, and a built-in database for mapping and visuialzing the some of the reconnaissance results. 
+Build your custom OSINT tools and APIs with this python package! It includes different OSINT modules for performing reconnaissance on the target, and a built-in database for mapping and visuialzing some of the reconnaissance results. 
 
 The final results is a json file that can be intergrated with other projects
 
