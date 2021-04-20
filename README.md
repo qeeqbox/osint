@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/osint/main/readme/osint.png"></p>
+<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/osint/main/readme/osint_logo.png"></p>
 
 Build your own custom OSINT tools and APIs with this python package! It includes different OSINT modules for performing reconnaissance on the target, and a built-in database for mapping and visuialzing the some of the reconnaissance results. 
 
