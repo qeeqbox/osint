@@ -9,11 +9,6 @@ The final results is a json file that can be intergrated with other projects
 sudo pip3 install osint
 ```
 
-## Usage Example - Test target
-```bash
-sudo python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
-```
-
 ## Usage Example - Scan ips or domains for http and https
 ```python
 from osint import QBDns, QBScan
@@ -34,6 +29,11 @@ print(targets)
 ## Usage Example - Interact with the built-in database
 ```python
 print(QBGetInfo().cursor.execute(("SELECT * FROM ports WHERE port=?"),(80,)).fetchone())
+```
+
+## Usage Example - Test
+```bash
+sudo python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
 ```
 
 ## Current modules
