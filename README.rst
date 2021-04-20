@@ -2,7 +2,7 @@
 
 Build your custom OSINT tools and APIs with this python package! It includes different OSINT modules for performing reconnaissance on the target, and a built-in database for mapping and visuialzing some of the reconnaissance results. 
 
-The final results is a json file that can be intergrated with other projects
+The final results is a json output that can be intergrated with other projects
 
 Install
 -------
