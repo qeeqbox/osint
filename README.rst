@@ -29,6 +29,7 @@ Usage Example - Extract text from domains
 ------------------------------------------------------
 .. code:: python
 
+    from osint import QBDns, QBHost, QBExtract
     targets = QBDns().convert_to_ips(["http://test..."] )
     targets = QBHost(headers=headers).run(targets)
     targets = QBExtract().run(targets,function="text")
