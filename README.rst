@@ -14,14 +14,14 @@ Usage Example - Test target
 ---------------------------
 .. code:: bash
 
-    sudo python3 -m osint --test "https://test.."
+    sudo python3 -m osint --test "https://test.com"
 
 Usage Example - Scan ips or domains for http and https
 ------------------------------------------------------
 .. code:: python
 
     from osint import QBDns, QBScan
-    targets = QBDns().convert_to_ips(["http://test...","1.2.3.4"] )
+    targets = QBDns().convert_to_ips(["https://test.com","1.2.3.4"] )
     targets = QBScan().run(targets,[80,443])
     print(targets)
 
@@ -30,7 +30,7 @@ Usage Example - Extract text from domains
 .. code:: python
 
     from osint import QBDns, QBHost, QBExtract
-    targets = QBDns().convert_to_ips(["http://test..."] )
+    targets = QBDns().convert_to_ips(["https://test.com"] )
     targets = QBHost(headers=headers).run(targets)
     targets = QBExtract().run(targets,function="text")
     print(targets)
