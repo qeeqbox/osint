@@ -11,6 +11,8 @@ pip3 install osint
 
 ## Usage Example - Test
 ```bash
+#Remember you need higher privileges
+
 sudo -E python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
 #Or your own script
 sudo -E test.py
@@ -29,6 +31,7 @@ print(targets)
 ## Usage Example - Extract text from domains
 ```python
 #Remember you need higher privileges
+
 from osint import QBDns, QBHost, QBExtract
 targets = QBDns().convert_to_ips(["http://test.com"] )
 targets = QBHost().run(targets)
