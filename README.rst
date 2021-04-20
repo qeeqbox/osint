@@ -10,12 +10,6 @@ Install
 
     sudo pip3 install osint
 
-Usage Example - Test target
----------------------------
-.. code:: bash
-
-    sudo python3 -m osint --test "https://test.com"
-
 Usage Example - Scan ips or domains for http and https
 ------------------------------------------------------
 .. code:: python
@@ -40,6 +34,12 @@ Usage Example - Interact with the built-in database
 .. code:: python
 
     print(QBGetInfo().cursor.execute(("SELECT * FROM ports WHERE port=?"),(80,)).fetchone())
+
+Usage Example - Test target
+---------------------------
+.. code:: bash
+
+    sudo python3 -m osint --test "https://test.com"
 
 Current modules
 ---------------
