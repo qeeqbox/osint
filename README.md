@@ -11,13 +11,13 @@ sudo pip3 install osint
 
 ## Usage Example - Test target
 ```bash
-sudo python3 -m osint --test "https://test.."
+sudo python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
 ```
 
 ## Usage Example - Scan ips or domains for http and https
 ```python
 from osint import QBDns, QBScan
-targets = QBDns().convert_to_ips(["http://test...","1.2.3.4"] )
+targets = QBDns().convert_to_ips(["http://test.com","1.2.3.4"] )
 targets = QBScan().run(targets,[80,443])
 print(targets)
 ```
@@ -25,7 +25,7 @@ print(targets)
 ## Usage Example - Extract text from domains
 ```python
 from osint import QBDns, QBHost, QBExtract
-targets = QBDns().convert_to_ips(["http://test..."] )
+targets = QBDns().convert_to_ips(["http://test.com"] )
 targets = QBHost(headers=headers).run(targets)
 targets = QBExtract().run(targets,function="text")
 print(targets)
