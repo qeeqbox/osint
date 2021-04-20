@@ -6,7 +6,14 @@ The final results is a json output that can be intergrated with other projects
 
 ## Install
 ```bash
-sudo pip3 install osint
+pip3 install osint
+```
+
+## Running
+```bash
+sudo -E python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
+#Or your script
+sudo -E test.py
 ```
 
 ## Usage Example - Scan ips or domains for http and https
