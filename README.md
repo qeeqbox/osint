@@ -9,15 +9,6 @@ The final results is a json output that can be intergrated with other projects
 pip3 install osint
 ```
 
-## Usage Example - Test
-```bash
-#Remember you need higher privileges
-
-sudo -E python3 -m osint --test --targets "https://test.com" --ports "21,22,80"
-#Or your own script
-sudo -E test.py
-```
-
 ## Usage Example - Scan ips or domains for http and https
 ```python
 #Remember you need higher privileges
