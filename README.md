@@ -41,13 +41,13 @@ print(QBGetInfo().cursor.execute(("SELECT * FROM ports WHERE port=?"),(80,)).fet
 ```python
 QBDns().convert_to_ips(targets)
 ```
-- `target` List of target domains or ips, the results is needed for the rest of modules e.g. ["http://test...","1.2.3.4"] 
+- `targets` List of target domains or ips, the results is needed for the rest of modules e.g. ["http://test...","1.2.3.4"] 
 
 #### QBHost() - Extract host information and cert
 ```python
 QBHost().run(targets, function)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 - `function` all, cert or content
 
 #### QBCached() - Check archive.org from snapshots
@@ -55,7 +55,7 @@ QBHost().run(targets, function)
 QBCached().run(targets, from_date_in, to_date_in)
 ```
 
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 - `from_date_in`   #start date as month/year e.g. 12/2020
 - `to_date_in`     #end date as month/year e.g. 12/2021 
 
@@ -63,14 +63,14 @@ QBCached().run(targets, from_date_in, to_date_in)
 ```python
 QBExtract().run(targets, function)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 - `function` all, text, metadata, links, image or language
 
 #### QBScan() - Extract text from pages
 ```python
 QBScan.run(targets, ports, function)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 - `ports` ports to scan e.g. [80,443]
 - `function` all, sync, tcp, xmas, fin, null, ack, window or udp
 
@@ -78,26 +78,26 @@ QBScan.run(targets, ports, function)
 ```python
 QBTraceRoute.run(targets)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 
 #### QBPing() - Ping host
 ```python
 QBPing.run(targets, function)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 function       #all, arp, icmp or udp
 
 #### QBWhois() - Whois information
 ```python
 QBWhois.run(targets)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targest` from QBDns().convert_to_ips() function
 
 #### QBICS() - Industrial Control Systems Scanning
 ```python
 QBICS.run(targets)
 ```
-- `target` from QBDns().convert_to_ips() function
+- `targets` from QBDns().convert_to_ips() function
 
 QBICS() module is not available and currently under testing
 
