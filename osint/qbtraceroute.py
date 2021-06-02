@@ -52,7 +52,7 @@ class QBTraceRoute():
                 alpha_2_code = None
                 flag_base64 = ""
                 if dict_in_temp[i]["ip"] != "unknown":
-                    temp_value = self.qbgetinfo.find_ip(int(IPv4Address(dict_in_temp[i]["ip"])))
+                    temp_value = self.qbgetinfo.find_ip(dict_in_temp[i]["ip"])
                     if temp_value is not None:
                         country = temp_value[6]
                         alpha_2_code = temp_value[4]
