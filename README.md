@@ -30,10 +30,12 @@ targets = QBExtract().run(targets,function="text")
 print(targets)
 ```
 
-## Usage Example - Interact with the built-in database
+## Usage Example - Interact with the built-in database (Search the entire database for a value)
 ```python
 from osint import QBGetInfo
-print(QBGetInfo().cursor.execute(("SELECT * FROM ports WHERE port=?"),(80,)).fetchone())
+print(QBGetInfo().search_all(8080))
+or 
+print(QBGetInfo().search_all("8080"))
 ```
 
 ## Current modules
